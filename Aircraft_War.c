@@ -193,8 +193,8 @@ void aci_move(aci *aci, list *bp, list *ap)
 {
 	if (kbhit())
 	{
-		
-		gotoxy(aci->hep.x, aci->hep.y-1);
+
+		gotoxy(aci->hep.x, aci->hep.y - 1);
 		printf("  ");
 		gotoxy(aci->hep.x, aci->hep.y);
 		printf("  ");
@@ -385,6 +385,18 @@ void gotoxy(int x, int y)
 
 void help()
 {
+
+	gotoxy(MAX_X + 8, 24);
+	ansi_fg_yellow();
+	ansi_font_bold();
+	printf("需要源码请关注我");
+	ansi_font_underline();
+
+	gotoxy(MAX_X + 8, 26);
+	printf("抖音：不学网");
+
+	ansi_font_underline_off();
+	ansi_reset();
 	gotoxy(MAX_X + 12, 29);
 	printf("游戏说明");
 	gotoxy(MAX_X + 5, 30);
